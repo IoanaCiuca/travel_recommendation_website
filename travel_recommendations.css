@@ -119,7 +119,8 @@ button {
     width: 10%;
 }
 .card {
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.614);
+box-shadow: 0 4px 8px 0 rgba(24, 3, 3, 0.704);
+background-color: rgba(37, 12, 72, 0.664);
 transition: 0.3s;
 width: 30%;
 border-radius: 5px;
@@ -138,6 +139,21 @@ box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.655);
     font-size: 12px;
     margin: 2px 1px;
     padding: 10px 20px;
+}
+
+.contact_us {
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+    width: 75%;
+}
+
+.contact_title {
+    width: 50%;
+}
+
+form {
+    width: 50%;
 }
 
 

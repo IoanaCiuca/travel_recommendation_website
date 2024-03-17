@@ -13,11 +13,6 @@
               <li><a href="./about_us.html" id="about_us">About Us </a></li>
               <li><a href="./contact_us.html" id="contact_us">Contact Us </a></li>
             </ul>
-            <div class="search-container">
-              <input type="text" id="recommendationInput" placeholder="Search...">  </li>
-              <button id='btnSearch'>Search</button>
-              <button id='btnReset'>Reset</button>
-            </div>
         </nav>
         <div class="container">
             <div class="column left">
@@ -28,14 +23,26 @@
                     <li><a href="#" class="fa fa-youtube"></a></li>
                 </ul>
             </div>
-            <div class="column middle">
-              <h2>EXPLORE DREAM DESTINATION</h2>
-              <p>It encourages exploration of unfamiliar territories, embrancing diverse
-                cultures and landscapes, while persuing the desired destination that captivates
-                the heart and ignites a sense of wonder.</p>
-                <button type="submit" onclick="#">Book Now</button>
-            </div>
-            <div class="column right">
+            <div class="column contact_us">
+              <div class="contact_title">
+                <h1>CONTACT US</h1>
+                <p>Get in touch</p>
+              </div>
+              <form id="contactForm">
+                <div>
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" onclick="">Send</button>
+              </form>
             </div>
           </div>
     </body>
