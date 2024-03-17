@@ -43,19 +43,26 @@ nav {
     margin-bottom: 10px;
   }
 
-.search_container {
-    padding: 20px;
-}
-.search_container button {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
+.search-container input{
+    border-radius: 25px;
+    width: 300px;
+    height: 25px;
+    border-radius: 25px;
+    border: none;
 }
 
-#recommendationInput {
-    padding: 6px;
+.search-container {
+    float: right;
+    margin: 7px;
 }
+ 
+.search-container button {
+    float: right;
+    padding: 5px 10px;
+    margin-right: 16px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+
 
