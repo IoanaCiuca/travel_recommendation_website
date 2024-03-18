@@ -74,8 +74,12 @@ nav ul {
     padding: 10px;
 }
 
-.left, .right {
-width: 25%;
+.left {
+width: 10%;
+}
+
+.right {
+    width: 40%;
 }
 
 .middle {
@@ -154,6 +158,11 @@ box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.655);
 
 form {
     width: 50%;
+}
+
+#result {
+    background-color: white;
+    color: black;
 }
 
 
