@@ -1,6 +1,9 @@
+const btnSearch = document.getElementById('btnSearch');
+const btnReset = document.getElementById('btnReset');
+const resultDiv = document.getElementById('result');
+
 function showResults() {
     const input = document.getElementById('recommendationInput').value.toLowerCase();
-    const resultDiv = document.getElementById('result');
     const countriesKeywords = ["countries", "country"];
     const templesKeywords = ["temple", "temples"];
     const beachesKeywords = ["beach", "beaches"];
@@ -23,20 +26,23 @@ function showResults() {
       .then(data => {
         if(countriesFlag) {
             inputResult = data.countries;
-        } else if(templesFlag) {
-            inputResult = data.temples;
-        } else {
-            inputResult = data.beaches;
-        }
-        inputResult.forEach(element => {
-            resultDiv.innerHTML += `<h1>${element.name}</h1>`;
-            let citiesArr = element.cities;
-            citiesArr.forEach(city => {
-                resultDiv.innerHTML += `<img src="${city.imageUrl}" alt="hjh" style="width: 20%">`;
-                resultDiv.innerHTML += `<p><strong>${city.name}</strong></p>`;
-                resultDiv.innerHTML += `<p>${city.description}</p>`;
+            inputResult.forEach(element => {
+                resultDiv.innerHTML += `<h1>${element.name}</h1>`;
+                let citiesArr = element.cities;
+                citiesArr.forEach(city => {
+                    resultDiv.innerHTML += `<img src="${city.imageUrl}" alt="hjh" style="width: 20%">`;
+                    resultDiv.innerHTML += `<p><strong>${city.name}</strong></p>`;
+                    resultDiv.innerHTML += `<p>${city.description}</p>`;
+                });
             });
-        });
+        } else if(templesFlag || beachesFlag) {
+            inputResult = data.temples;
+            inputResult.forEach(element => {
+                resultDiv.innerHTML += `<img src="${element.imageUrl}" alt="hjh" style="width: 20%">`;
+                resultDiv.innerHTML += `<p><strong>${element.name}</strong></p>`;
+                resultDiv.innerHTML += `<p>${element.description}</p>`;
+            })
+        }
       })
       .catch(error => {
         console.error('Error:', error);
@@ -44,4 +50,9 @@ function showResults() {
       });
   }
 
-  btnSearch.addEventListener('click', showResults);
+function clearResults() {
+    resultDiv.innerHTML = '';
+}
+
+btnSearch.addEventListener('click', showResults);
+btnReset.addEventListener('click', clearResults);

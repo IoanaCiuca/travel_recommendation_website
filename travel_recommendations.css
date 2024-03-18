@@ -38,6 +38,9 @@ nav ul {
     font-family: Arial, sans-serif;
     background: url('./traveller_background.png');
     color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
   }
   
   h1 {
@@ -163,6 +166,7 @@ form {
 #result {
     background-color: white;
     color: black;
+    padding: 10px;
 }
 
 
